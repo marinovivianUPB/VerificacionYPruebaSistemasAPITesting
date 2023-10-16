@@ -16,9 +16,6 @@ public class EjercicioClase {
 
     public String post ="post";
     public String postNoAuth ="postnoauth";
-    public String put = "put";
-    public String get ="get";
-    public String delete ="delete";
 
     public RequestInfo requestInfo;
     public Response response;
@@ -34,7 +31,7 @@ public class EjercicioClase {
         body.put("Password",Configuration.password);
 
         //create user
-        this.createUser(Configuration.user_host + ".json", body, postNoAuth);
+        this.createUser(Configuration.user_host +".json", body, postNoAuth);
         int idUser = response.then().extract().path("Id");
 
         JSONObject bodyItem = new JSONObject();

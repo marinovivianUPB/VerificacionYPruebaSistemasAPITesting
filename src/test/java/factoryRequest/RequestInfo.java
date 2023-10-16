@@ -27,8 +27,8 @@ public class RequestInfo {
         return this;
     }
 
-    public Map<String, String> getHeaders() {
-        return headers;
+    public String getHeader(String key) {
+        return headers.get(key);
     }
 
     public RequestInfo setHeaders(String key, String value) {
